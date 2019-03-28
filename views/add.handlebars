@@ -1,0 +1,77 @@
+<section class="formSec" style="width:60%;margin:0 auto;padding-top:60px;">
+<h1>Add Book Details</h1>
+
+<div class="container">
+{{#each errors}}
+    <div class="alert alert-danger">
+    <strong>{{text}}</strong> 
+  </div>
+
+{{/each}}
+
+</div>
+
+
+
+
+
+<form method="POST" action="/books/add" >
+
+	<div class="form-group"> <!-- Name field -->
+		<label class="control-label requiredField" for="name">Title<span class="asteriskField">*</span></label>
+		<input  type="text" class="form-control" name="Name" value={{Name}} >
+	</div>
+	
+	<div class="form-group"> <!-- Email field -->
+		<label class="control-label requiredField" for="email">Author<span class="asteriskField">*</span></label>
+		<input type="text" class="form-control" name="Author" value={{Author}} >
+	</div>
+	
+	
+<div class="form-group"> <!-- Email field -->
+		<label class="control-label requiredField" for="email">Keywords<span class="asteriskField">*</span></label>
+		<input type="text" class="form-control" name="Keywords" value={{Keywords}} >
+	</div>
+
+    <div class="form-group"> <!-- Email field -->
+		<label class="control-label requiredField" for="email">Year of Published<span class="asteriskField">*</span></label>
+		<input type="text" class="form-control" name="Yearof" value={{Yearof}} >
+	</div>
+
+
+    <div class="form-group"> <!-- Email field -->
+		<label class="control-label" for="email">No of Books<span class="asteriskField">*</span></label>
+		<input type="text" class="form-control" name="NoOfBooks" value={{NoOfBooks}} >
+	</div>
+
+	
+	
+	
+	<div class="form-group">
+		<button class="btn btn-primary " name="submit" type="submit" >Add Book</button>
+	</div>
+	
+</form>								
+						
+
+
+
+<!--<form method="POST" action="/books/add">  
+
+Title
+<input type="text" name="title" value={{title}}>
+<br>
+Technology 
+<input type="text" name="technology" value={{technology}}>
+<br>
+
+<input type="submit" value="submit">
+
+
+
+
+</form>-->
+
+
+
+</section>
